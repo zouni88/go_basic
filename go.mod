@@ -1,2 +1,3 @@
-module "go_basic"
+module go_basic
 
+go 1.14
