@@ -1,6 +1,8 @@
 package main
 
-import "go_basic/基础语法/models"
+import (
+	"go_basic/models"
+)
 
 
 func Call(phone models.Phone)  {
@@ -12,5 +14,7 @@ func main() {
 	iphone := models.Iphone{Name: "iphone 11"}
 	Call(&hw)
 	Call(&iphone)
+
+
 }
 

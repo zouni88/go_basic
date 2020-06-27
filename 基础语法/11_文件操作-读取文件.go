@@ -18,7 +18,7 @@ func writeFile(){
 func buffoper() {
 	file,_ := os.Open("aa.txt")
 	reader := bufio.NewReader(file)
-
+	defer file.Close()
 	for {
 		res,err := reader.ReadBytes('\n')
 		if err == io.EOF{
@@ -27,8 +27,6 @@ func buffoper() {
 		}
 		fmt.Println(string(res))
 	}
-
-	file.Close()
 
 }
 

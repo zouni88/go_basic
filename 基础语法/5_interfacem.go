@@ -25,7 +25,8 @@ func main() {
 	//aa:= 1
 	//bb:= 2
 
-	errors.New("错误信息？？？")
+	var err = errors.New("错误信息？？？")
+	fmt.Println(err)
 
 }
 
