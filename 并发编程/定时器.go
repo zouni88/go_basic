@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-
 	t := time.NewTicker(time.Second)
 	for {
 		times := <- t.C
