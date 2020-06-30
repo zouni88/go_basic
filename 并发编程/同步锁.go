@@ -3,28 +3,31 @@ package main
 import (
 	"fmt"
 	"sync"
-	"time"
 )
 
 var count = 10
 var lock sync.Mutex
 
-func Consume()  {
+func Consume(wg *sync.WaitGroup)  {
+
 	lock.Lock()
+	defer wg.Done()
+	defer lock.Unlock()
 	if count == 0{
 		fmt.Println("没有库存了")
 		return
 	}
 	count --
-	lock.Unlock()
+
 	fmt.Println(count)
 }
 
 func main() {
-
+	wg := sync.WaitGroup{}
 	for range [100]int{}{
-		go Consume()
+		wg.Add(1)
+		go Consume(&wg)
 	}
-	time.Sleep(time.Second)
+	wg.Wait()
 	fmt.Println(count)
 }
