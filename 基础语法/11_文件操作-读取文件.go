@@ -7,8 +7,9 @@ import (
 	"os"
 )
 
-func writeFile(){
-	file ,_ := os.OpenFile("aa.txt",os.O_RDWR,os.FileMode(6))
+func writeFile() {
+
+	file, _ := os.OpenFile("aa.txt", os.O_RDWR, os.FileMode(6))
 	file.Write([]byte("我的天1\r\n"))
 	file.Write([]byte("我的天2\n\n"))
 	defer file.Close()
@@ -16,12 +17,12 @@ func writeFile(){
 }
 
 func buffoper() {
-	file,_ := os.Open("aa.txt")
+	file, _ := os.Open("aa.txt")
 	reader := bufio.NewReader(file)
 	defer file.Close()
 	for {
-		res,err := reader.ReadBytes('\n')
-		if err == io.EOF{
+		res, err := reader.ReadBytes('\n')
+		if err == io.EOF {
 			fmt.Println("结束了")
 			break
 		}

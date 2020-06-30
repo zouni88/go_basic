@@ -30,7 +30,7 @@ func mtrim() {
 	fmt.Println(res)
 }
 
-func mfeild(){
+func mfeild() {
 	//去除字符串中的空格，分割字符串变成切片，
 	str := "我 了ge 咯咯 咯 咯咯 咯咯"
 	res := strings.Fields(str)

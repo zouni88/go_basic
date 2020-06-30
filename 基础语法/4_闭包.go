@@ -4,7 +4,7 @@ import "fmt"
 
 func forward(value int) func() int {
 	return func() int {
-		value ++
+		value++
 		return value
 	}
 
@@ -20,9 +20,8 @@ func main() {
 	fmt.Println(res1())
 	fmt.Println(res1())
 
-	ress, err := fmt.Printf("%p,%p\n", res,res1)
-	fmt.Println(ress,err)
-
+	ress, err := fmt.Printf("%p,%p\n", res, res1)
+	fmt.Println(ress, err)
 
 	//e := 123
 	//c := func() {
@@ -31,8 +30,7 @@ func main() {
 	//c()
 	//fmt.Println(e)
 	a := 123
-	res111 := fmt.Sprintf("我的%v",a)
+	res111 := fmt.Sprintf("我的%v", a)
 	fmt.Println(res111)
-
 
 }

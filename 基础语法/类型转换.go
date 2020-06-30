@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func AnyFunc(v interface{})  {
+func AnyFunc(v interface{}) {
 
 }
 

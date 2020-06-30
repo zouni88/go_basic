@@ -9,7 +9,7 @@ import (
 func main() {
 	socket, err := net.DialUDP("udp", nil, &net.UDPAddr{
 		IP:   net.IPv4(0, 0, 0, 0),
-		Port: 30000,
+		Port: 8888,
 	})
 	if err != nil {
 		fmt.Println("连接服务端失败，err:", err)

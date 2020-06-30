@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 type People struct {
-	id int
+	id  int
 	age int
 }
 

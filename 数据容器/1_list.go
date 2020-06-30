@@ -8,10 +8,10 @@ import (
 func main() {
 	lis := list.New()
 
-	for i := range [10]int{}{
+	for i := range [10]int{} {
 		lis.PushBack(i)
 	}
-	for i := lis.Front();i!= nil;i= i.Next(){
+	for i := lis.Front(); i != nil; i = i.Next() {
 		fmt.Println(i)
 	}
 
@@ -20,5 +20,3 @@ func main() {
 	i := lis.Front().Next().Next().Next().Next()
 	fmt.Println(i)
 }
-
-

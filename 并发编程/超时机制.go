@@ -9,7 +9,7 @@ func main() {
 		fmt.Println("放进去了")
 	}()
 	select {
-	case <- c:
+	case <-c:
 		fmt.Println("结束")
 	}
 }

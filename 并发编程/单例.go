@@ -9,7 +9,7 @@ type User struct {
 	Name string
 }
 
-func GetInstance() * User {
+func GetInstance() *User {
 	new(sync.Once).Do(func() {
 		user = &User{}
 	})
@@ -19,10 +19,16 @@ func GetInstance() * User {
 var user *User
 
 func inits() {
+	var a = sync.WaitGroup{}
 	for _ = range [10]int{} {
-		user = GetInstance()
-		fmt.Printf("%p\n",&user)
+		a.Add(1)
+		go func() {
+			user = GetInstance()
+			fmt.Printf("%p\n", &user)
+			a.Done()
+		}()
 	}
+	a.Wait()
 }
 
 func main() {

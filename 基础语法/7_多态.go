@@ -4,8 +4,7 @@ import (
 	"go_basic/models"
 )
 
-
-func Call(phone models.Phone)  {
+func Call(phone models.Phone) {
 	phone.Call()
 }
 
@@ -15,6 +14,4 @@ func main() {
 	Call(&hw)
 	Call(&iphone)
 
-
 }
-

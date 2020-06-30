@@ -6,10 +6,10 @@ type persons struct {
 	name string
 }
 
-func modify_name(name *persons)  {
+func modify_name(name *persons) {
 	name.name = "wang"
 	per := *name
-	fmt.Println("wodetian",per)
+	fmt.Println("wodetian", per)
 	fmt.Println(per.name)
 }
 

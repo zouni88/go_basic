@@ -8,8 +8,8 @@ import (
 func main() {
 	t := time.NewTicker(time.Second)
 	for {
-		times := <- t.C
-		fmt.Println("...",times)
+		times := <-t.C
+		fmt.Println("...", times)
 	}
 
 }

@@ -9,11 +9,11 @@ type Person struct {
 	name string
 }
 
-func (per *Person) result()  {
+func (per *Person) result() {
 	fmt.Println(per.name)
 }
 
-func Bian(a add)  {
+func Bian(a add) {
 	a.result()
 }
 func main() {
@@ -23,9 +23,9 @@ func main() {
 
 	ad := per
 	ad.result()
-	fmt.Printf("%p",&ad)
+	fmt.Printf("%p", &ad)
 	fmt.Println("")
-	fmt.Printf("%p",&per)
+	fmt.Printf("%p", &per)
 
 	Bian(&per)
 }

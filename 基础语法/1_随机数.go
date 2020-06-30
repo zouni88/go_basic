@@ -14,7 +14,4 @@ func main() {
 	time.Sleep(2000)
 	fmt.Println(a)
 
-
-
-
 }

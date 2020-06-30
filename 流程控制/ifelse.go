@@ -19,10 +19,9 @@ func main() {
 
 	b := "str"
 	switch b {
-	case "str","sub":
+	case "str", "sub":
 		fmt.Println("我的天")
 	case "wo":
 	}
-	
 
 }

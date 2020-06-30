@@ -5,22 +5,21 @@ import (
 	"fmt"
 )
 
-
 type Minter interface {
-	sum(a,b int) int
+	sum(a, b int) int
 }
 
 type Phone struct {
-
 }
-func (mm Phone) sum(a,b int) int {
-	fmt.Println(a+b)
-	return a+b
+
+func (mm Phone) sum(a, b int) int {
+	fmt.Println(a + b)
+	return a + b
 }
 
 func main() {
 	addd := new(Phone)
-	a := addd.sum(1,2)
+	a := addd.sum(1, 2)
 	fmt.Println(a)
 	//aa:= 1
 	//bb:= 2
@@ -40,4 +39,3 @@ func main() {
 type error interface {
 	Error() string
 }
-
