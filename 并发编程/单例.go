@@ -19,6 +19,8 @@ func GetInstance() *User {
 var user *User
 
 func inits() {
+	//var user = User.GetInstance()
+
 	var a = sync.WaitGroup{}
 	for _ = range [10]int{} {
 		a.Add(1)

@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"runtime"
 	"time"
 )
 
@@ -17,7 +16,7 @@ func A(msgs chan *Person, name string) {
 	//pe := *per
 	msgs <- per
 
-	runtime.GOMAXPROCS()
+	//runtime.GOMAXPROCS()
 }
 
 func delay(msgs chan *Person, per *Person) {

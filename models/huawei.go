@@ -4,6 +4,7 @@ import "fmt"
 
 type Huawei struct {
 	Name string
+
 }
 
 func (huawei *Huawei) Call() {

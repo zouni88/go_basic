@@ -9,9 +9,9 @@ func Call(phone models.Phone) {
 }
 
 func main() {
-	hw := models.Huawei{Name: "P30"}
+	var hw Phone = models.Huawei{Name: "P30"}
 	iphone := models.Iphone{Name: "iphone 11"}
-	Call(&hw)
+	//Call(&hw)
 	Call(&iphone)
 
 }
