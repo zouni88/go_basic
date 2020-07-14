@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 var AAA struct {
-	Id int
+	Id int `json:"id" xml:"id"`
 }
 
 func main() {
@@ -13,4 +13,11 @@ func main() {
 	var c interface{}
 	c = 123
 	fmt.Println(c)
+
+	//变量引用
+	var aa = 123
+	func(aa int) {
+		aa = 456
+	}(aa)
+	fmt.Println(aa)
 }

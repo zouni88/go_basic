@@ -9,9 +9,6 @@ type Minter interface {
 	sum(a, b int) int
 }
 
-type Phone struct {
-}
-
 func (mm Phone) sum(a, b int) int {
 	fmt.Println(a + b)
 	return a + b

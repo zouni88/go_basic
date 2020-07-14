@@ -1,6 +1,9 @@
 package main
 
-import "go_basic/models"
+import (
+	"go_basic/models"
+
+)
 
 func main() {
 	var hw models.Phone = &models.Huawei{Name: "P30"}
@@ -10,4 +13,5 @@ func main() {
 	go func() {
 		print(123)
 	}()
+
 }
