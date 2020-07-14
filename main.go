@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"go_basic/models"
-
+	"time"
 )
 
 func main() {
@@ -22,4 +22,8 @@ func main() {
 	json.Name = "cao"
 	fmt.Println(json.Name)
 
+	start := time.Now()
+	time.Sleep(time.Second)
+	end := time.Since(start)
+	fmt.Println(end)
 }

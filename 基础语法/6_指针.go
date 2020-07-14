@@ -21,4 +21,24 @@ func main() {
 	swap(&aa, &bb)
 	fmt.Println(aa, bb)
 
+	cc := "cao"
+	fmt.Printf("%p\n",&cc)
+	ee := &cc
+
+	*ee = "zhang"
+	fmt.Printf("%p\n",&cc)
+
+	var eee = make([]byte,1)
+	var bbb byte= 'c'
+	eeee := byte('0')
+	var ddd byte = 'd'
+	eee = append(eee,ddd)
+	fmt.Println(string(bbb),"\n",bbb)
+	eee = append(eee,ddd,eeee)
+	fmt.Println(eee)
+
+	//ddddd := []byte{ddd}
+	//eee = append(eee,ddddd)
+	//append
+
 }
