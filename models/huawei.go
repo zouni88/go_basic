@@ -8,5 +8,5 @@ type Huawei struct {
 }
 
 func (huawei *Huawei) Call() {
-	fmt.Printf("这是一个%s手机", huawei.Name)
+	fmt.Printf("这是一个%s手机\n", huawei.Name)
 }

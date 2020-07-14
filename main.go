@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"go_basic/models"
 
 )
@@ -11,7 +12,14 @@ func main() {
 	iphone.Call()
 	hw.Call()
 	go func() {
-		print(123)
+		fmt.Println(123)
 	}()
+
+	var json struct{
+		Name string `json:"name"`
+	}
+
+	json.Name = "cao"
+	fmt.Println(json.Name)
 
 }

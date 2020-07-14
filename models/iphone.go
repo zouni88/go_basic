@@ -8,5 +8,5 @@ type Iphone struct {
 }
 
 func (iphone *Iphone) Call() {
-	fmt.Printf("这是一个%s手机", iphone.Name)
+	fmt.Printf("这是一个%s手机\n", iphone.Name)
 }
